@@ -1,0 +1,23 @@
+C:/intelFPGA/ver_diploma/Final_Project/FIFO/FIFO_transaction.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/Final_Project/FIFO/FIFO_transaction.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package FIFO_transaction_pkg
+-- Importing package shared_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} C:/intelFPGA/ver_diploma/Final_Project/FIFO/FIFO_interface.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/Final_Project/FIFO/FIFO_interface.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling interface FIFO_interface
+
+Top level modules:
+	--none--
+
+} {} {}} C:/intelFPGA/ver_diploma/Final_Project/FIFO/shared_pkg.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/ver_diploma/Final_Project/FIFO/shared_pkg.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package shared_pkg
+
+Top level modules:
+	--none--
+
+} {} {}}

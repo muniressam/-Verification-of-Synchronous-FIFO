@@ -1,0 +1,686 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /\top#DUT 
+=== Design Unit: work.FIFO
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      13        13         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT /assert_reset
+                     FIFO.sv(29)                        0          1
+/\top#DUT /assert_full
+                     FIFO.sv(34)                        0          1
+/\top#DUT /assert_empty
+                     FIFO.sv(39)                        0          1
+/\top#DUT /assert_almostfull
+                     FIFO.sv(44)                        0          1
+/\top#DUT /assert_almostempty
+                     FIFO.sv(49)                        0          1
+/\top#DUT /assert_wr_ack
+                     FIFO.sv(62)                        0          1
+/\top#DUT /assert_overflow
+                     FIFO.sv(69)                        0          1
+/\top#DUT /assert_underflow
+                     FIFO.sv(76)                        0          1
+/\top#DUT /assert_wr_ptr_wrap_up
+                     FIFO.sv(83)                        0          1
+/\top#DUT /assert_rd_ptr_wrap_up
+                     FIFO.sv(90)                        0          1
+/\top#DUT /assert_count_up
+                     FIFO.sv(97)                        0          1
+/\top#DUT /assert_count_down
+                     FIFO.sv(104)                       0          1
+/\top#DUT /assert_pointer_threshold
+                     FIFO.sv(111)                       0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        35        35         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\top#DUT 
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO.sv
+------------------------------------IF Branch------------------------------------
+    28                                       121     Count coming in to IF
+    28              1                         19     			if(!fifo_if.rst_n) begin
+                                             102     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    33                                       121     Count coming in to IF
+    33              1                         17     			if(count == FIFO_DEPTH) begin
+                                             104     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    38                                       121     Count coming in to IF
+    38              1                         23     			if (count == 0) begin
+                                              98     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    43                                       121     Count coming in to IF
+    43              1                         30     			if (count == FIFO_DEPTH-1) begin // error in design, should be FIFO_DEPTH-1
+                                              91     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    48                                       121     Count coming in to IF
+    48              1                         25     			if (count == 1) begin
+                                              96     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    117                                      249     Count coming in to IF
+    117             1                        104     		if (!fifo_if.rst_n) begin
+    122             1                         62     		else if (fifo_if.wr_en && count < FIFO_DEPTH) begin
+    128             1                         83     		else begin 
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    130                                       83     Count coming in to IF
+    130             1                         38     			if (fifo_if.full && fifo_if.wr_en) //bugs &&
+    132             1                         45     			else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    138                                      249     Count coming in to IF
+    138             1                        104     		if (!fifo_if.rst_n) begin
+    143             1                         50     		else if (fifo_if.rd_en && count != 0) begin
+    148             1                         95     		else begin
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    149                                       95     Count coming in to IF
+    149             1                          7     			if (fifo_if.empty && fifo_if.rd_en) // bugs &&
+    151             1                         88     			else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    157                                      196     Count coming in to IF
+    157             1                         80     		if (!fifo_if.rst_n) begin
+    160             1                        116     		else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    161                                      116     Count coming in to IF
+    161             1                         39     			if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b10) && !fifo_if.full) 
+    163             1                         20     			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b01) && !fifo_if.empty) 
+    165             1                          2     			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b11) && fifo_if.empty) 
+    167             1                          9     			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b11) && fifo_if.full)
+    169             1                         46     			else 
+Branch totals: 5 hits of 5 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    175                                       77     Count coming in to IF
+    175             1                         17     		assign fifo_if.full = (count == FIFO_DEPTH)? 1 : 0;
+    175             2                         60     		assign fifo_if.full = (count == FIFO_DEPTH)? 1 : 0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    176                                       77     Count coming in to IF
+    176             1                          9     		assign fifo_if.empty = (count == 0)? 1 : 0;
+    176             2                         68     		assign fifo_if.empty = (count == 0)? 1 : 0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    178                                       77     Count coming in to IF
+    178             1                         23     		assign fifo_if.almostfull = (count == FIFO_DEPTH-1)? 1 : 0; // error in design, should be FIFO_DEPTH-1
+    178             2                         54     		assign fifo_if.almostfull = (count == FIFO_DEPTH-1)? 1 : 0; // error in design, should be FIFO_DEPTH-1
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    179                                       77     Count coming in to IF
+    179             1                          9     		assign fifo_if.almostempty = (count == 1)? 1 : 0;
+    179             2                         68     		assign fifo_if.almostempty = (count == 1)? 1 : 0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      28        28         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /\top#DUT  --
+
+  File FIFO.sv
+----------------Focused Condition View-------------------
+Line       33 Item    1  (count == 8)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count == 8)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == 8)_0        -                             
+  Row   2:          1  (count == 8)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       38 Item    1  (count == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == 0)_0        -                             
+  Row   2:          1  (count == 0)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       43 Item    1  (count == (8 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+          Input Term   Covered  Reason for no coverage   Hint
+         -----------  --------  -----------------------  --------------
+  (count == (8 - 1))         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == (8 - 1))_0  -                             
+  Row   2:          1  (count == (8 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       48 Item    1  (count == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == 1)_0        -                             
+  Row   2:          1  (count == 1)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       122 Item    1  (fifo_if.wr_en && (count < 8))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.wr_en         Y
+    (count < 8)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.wr_en_0       -                             
+  Row   2:          1  fifo_if.wr_en_1       (count < 8)                   
+  Row   3:          1  (count < 8)_0         fifo_if.wr_en                 
+  Row   4:          1  (count < 8)_1         fifo_if.wr_en                 
+
+----------------Focused Condition View-------------------
+Line       130 Item    1  (fifo_if.full && fifo_if.wr_en)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+   fifo_if.full         Y
+  fifo_if.wr_en         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.full_0        -                             
+  Row   2:          1  fifo_if.full_1        fifo_if.wr_en                 
+  Row   3:          1  fifo_if.wr_en_0       fifo_if.full                  
+  Row   4:          1  fifo_if.wr_en_1       fifo_if.full                  
+
+----------------Focused Condition View-------------------
+Line       143 Item    1  (fifo_if.rd_en && (count != 0))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.rd_en         Y
+   (count != 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.rd_en_0       -                             
+  Row   2:          1  fifo_if.rd_en_1       (count != 0)                  
+  Row   3:          1  (count != 0)_0        fifo_if.rd_en                 
+  Row   4:          1  (count != 0)_1        fifo_if.rd_en                 
+
+----------------Focused Condition View-------------------
+Line       149 Item    1  (fifo_if.empty && fifo_if.rd_en)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.empty         Y
+  fifo_if.rd_en         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.empty_0       -                             
+  Row   2:          1  fifo_if.empty_1       fifo_if.rd_en                 
+  Row   3:          1  fifo_if.rd_en_0       fifo_if.empty                 
+  Row   4:          1  fifo_if.rd_en_1       fifo_if.empty                 
+
+----------------Focused Condition View-------------------
+Line       161 Item    1  ((~fifo_if.rd_en && fifo_if.wr_en) && ~fifo_if.full)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.rd_en         Y
+  fifo_if.wr_en         Y
+   fifo_if.full         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.rd_en_0       (~fifo_if.full && fifo_if.wr_en)
+  Row   2:          1  fifo_if.rd_en_1       -                             
+  Row   3:          1  fifo_if.wr_en_0       ~fifo_if.rd_en                
+  Row   4:          1  fifo_if.wr_en_1       (~fifo_if.full && ~fifo_if.rd_en)
+  Row   5:          1  fifo_if.full_0        (~fifo_if.rd_en && fifo_if.wr_en)
+  Row   6:          1  fifo_if.full_1        (~fifo_if.rd_en && fifo_if.wr_en)
+
+----------------Focused Condition View-------------------
+Line       163 Item    1  ((fifo_if.rd_en && ~fifo_if.wr_en) && ~fifo_if.empty)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.rd_en         Y
+  fifo_if.wr_en         Y
+  fifo_if.empty         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.rd_en_0       -                             
+  Row   2:          1  fifo_if.rd_en_1       (~fifo_if.empty && ~fifo_if.wr_en)
+  Row   3:          1  fifo_if.wr_en_0       (~fifo_if.empty && fifo_if.rd_en)
+  Row   4:          1  fifo_if.wr_en_1       fifo_if.rd_en                 
+  Row   5:          1  fifo_if.empty_0       (fifo_if.rd_en && ~fifo_if.wr_en)
+  Row   6:          1  fifo_if.empty_1       (fifo_if.rd_en && ~fifo_if.wr_en)
+
+----------------Focused Condition View-------------------
+Line       165 Item    1  ((fifo_if.rd_en && fifo_if.wr_en) && fifo_if.empty)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.rd_en         Y
+  fifo_if.wr_en         Y
+  fifo_if.empty         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.rd_en_0       -                             
+  Row   2:          1  fifo_if.rd_en_1       (fifo_if.empty && fifo_if.wr_en)
+  Row   3:          1  fifo_if.wr_en_0       fifo_if.rd_en                 
+  Row   4:          1  fifo_if.wr_en_1       (fifo_if.empty && fifo_if.rd_en)
+  Row   5:          1  fifo_if.empty_0       (fifo_if.rd_en && fifo_if.wr_en)
+  Row   6:          1  fifo_if.empty_1       (fifo_if.rd_en && fifo_if.wr_en)
+
+----------------Focused Condition View-------------------
+Line       167 Item    1  ((fifo_if.rd_en && fifo_if.wr_en) && fifo_if.full)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.rd_en         Y
+  fifo_if.wr_en         Y
+   fifo_if.full         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.rd_en_0       -                             
+  Row   2:          1  fifo_if.rd_en_1       (fifo_if.full && fifo_if.wr_en)
+  Row   3:          1  fifo_if.wr_en_0       fifo_if.rd_en                 
+  Row   4:          1  fifo_if.wr_en_1       (fifo_if.full && fifo_if.rd_en)
+  Row   5:          1  fifo_if.full_0        (fifo_if.rd_en && fifo_if.wr_en)
+  Row   6:          1  fifo_if.full_1        (fifo_if.rd_en && fifo_if.wr_en)
+
+----------------Focused Condition View-------------------
+Line       175 Item    1  (count == 8)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count == 8)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == 8)_0        -                             
+  Row   2:          1  (count == 8)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       176 Item    1  (count == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == 0)_0        -                             
+  Row   2:          1  (count == 0)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       178 Item    1  (count == (8 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+          Input Term   Covered  Reason for no coverage   Hint
+         -----------  --------  -----------------------  --------------
+  (count == (8 - 1))         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == (8 - 1))_0  -                             
+  Row   2:          1  (count == (8 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       179 Item    1  (count == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == 1)_0        -                             
+  Row   2:          1  (count == 1)_1        -                             
+
+
+
+Directive Coverage:
+    Directives                      13        13         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT /cover_reset                   FIFO   Verilog  SVA  FIFO.sv(30)       11 Covered   
+/\top#DUT /cover_full                    FIFO   Verilog  SVA  FIFO.sv(35)       17 Covered   
+/\top#DUT /cover_empty                   FIFO   Verilog  SVA  FIFO.sv(40)       23 Covered   
+/\top#DUT /cover_almostfull              FIFO   Verilog  SVA  FIFO.sv(45)       30 Covered   
+/\top#DUT /cover_almostempty             FIFO   Verilog  SVA  FIFO.sv(50)       25 Covered   
+/\top#DUT /cover_wr_ack                  FIFO   Verilog  SVA  FIFO.sv(63)       56 Covered   
+/\top#DUT /cover_overflow                FIFO   Verilog  SVA  FIFO.sv(70)       38 Covered   
+/\top#DUT /cover_underflow               FIFO   Verilog  SVA  FIFO.sv(77)        4 Covered   
+/\top#DUT /cover_wr_ptr_wrap_up          FIFO   Verilog  SVA  FIFO.sv(84)        4 Covered   
+/\top#DUT /cover_rd_ptr_wrap_up          FIFO   Verilog  SVA  FIFO.sv(91)        4 Covered   
+/\top#DUT /cover_count_up                FIFO   Verilog  SVA  FIFO.sv(98)       34 Covered   
+/\top#DUT /cover_count_down              FIFO   Verilog  SVA  FIFO.sv(105)      20 Covered   
+/\top#DUT /cover_pointer_threshold       FIFO   Verilog  SVA  FIFO.sv(112)     145 Covered   
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      31        31         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\top#DUT  --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO.sv
+    8                                                module FIFO(FIFO_interface.DUT fifo_if);
+    9                                                	parameter FIFO_WIDTH = 16;
+    10                                               	parameter FIFO_DEPTH = 8;
+    11                                               	//input [FIFO_WIDTH-1:0] data_in;
+    12                                               	//input clk, rst_n, wr_en, rd_en;
+    13                                               	//output reg [FIFO_WIDTH-1:0] data_out;
+    14                                               	//output reg wr_ack, overflow;
+    15                                               	//output full, empty, almostfull, almostempty, underflow;
+    16                                               	 
+    17                                               	localparam max_fifo_addr = $clog2(FIFO_DEPTH);
+    18                                               	
+    19                                               	reg [FIFO_WIDTH-1:0] mem [FIFO_DEPTH-1:0];
+    20                                               	
+    21                                               	reg [max_fifo_addr-1:0] wr_ptr, rd_ptr;
+    22                                               	reg [max_fifo_addr:0] count;
+    23                                               	
+    24                                               	
+    25                                               	`ifdef SIM
+    26              1                        121     		always_comb begin 
+    27                                               			//Reset
+    28                                               			if(!fifo_if.rst_n) begin
+    29                                               				assert_reset : assert final (count == 0 && wr_ptr == 0 && rd_ptr == 0) ;
+    30                                               				cover_reset : cover final (count == 0 && wr_ptr == 0 && rd_ptr == 0) ;
+    31                                               			end
+    32                                               			//FIFO_3
+    33                                               			if(count == FIFO_DEPTH) begin
+    34                                               				assert_full : assert  (fifo_if.full) ;
+    35                                               				cover_full : cover  (fifo_if.full) ;
+    36                                               			end
+    37                                               			//FIFO_4
+    38                                               			if (count == 0) begin
+    39                                               				assert_empty : assert  (fifo_if.empty) ;
+    40                                               				cover_empty : cover  (fifo_if.empty) ;
+    41                                               			end
+    42                                               			//FIFO_5
+    43                                               			if (count == FIFO_DEPTH-1) begin // error in design, should be FIFO_DEPTH-1
+    44                                               				assert_almostfull : assert  (fifo_if.almostfull) ;
+    45                                               				cover_almostfull : cover  (fifo_if.almostfull) ;
+    46                                               			end
+    47                                               			//FIFO_6
+    48                                               			if (count == 1) begin
+    49                                               				assert_almostempty : assert  (fifo_if.almostempty) ;
+    50                                               				cover_almostempty : cover  (fifo_if.almostempty) ;
+    51                                               			end
+    52                                               		end
+    53                                               	`endif
+    54                                               	
+    55                                               	
+    56                                               	`ifdef SIM
+    57                                               		//FIFO_7
+    58                                               		property p_wr_ack;
+    59                                               			@(posedge fifo_if.clk) disable iff (!fifo_if.rst_n) 
+    60                                               			(fifo_if.wr_en && count < FIFO_DEPTH) |=> (fifo_if.wr_ack);
+    61                                               		endproperty
+    62                                               		assert_wr_ack: assert property (p_wr_ack) ;
+    63                                               		cover_wr_ack: cover property (p_wr_ack)  ;
+    64                                               		//FIFO_8
+    65                                               		property p_overflow;
+    66                                               			@(posedge fifo_if.clk) disable iff (!fifo_if.rst_n) 
+    67                                               			(fifo_if.full && fifo_if.wr_en) |=> (fifo_if.overflow);
+    68                                               		endproperty
+    69                                               		assert_overflow: assert property (p_overflow) ;
+    70                                               		cover_overflow: cover property (p_overflow) ;
+    71                                               		//FIFO_9
+    72                                               		property p_underflow;
+    73                                               			@(posedge fifo_if.clk) disable iff (!fifo_if.rst_n) 
+    74                                               			(fifo_if.empty && fifo_if.rd_en) |=> (fifo_if.underflow);
+    75                                               		endproperty
+    76                                               		assert_underflow: assert property (p_underflow) ;
+    77                                               		cover_underflow: cover property (p_underflow) ;
+    78                                               		//FIFO_10
+    79                                               		property p_wr_ptr_wrap_up;
+    80                                               			@(posedge fifo_if.clk) disable iff (!fifo_if.rst_n) 
+    81                                               			(fifo_if.wr_en && wr_ptr == FIFO_DEPTH-1 && !fifo_if.full) ##1 (fifo_if.wr_en && !fifo_if.full ) |-> (wr_ptr == 0);
+    82                                               		endproperty
+    83                                               		assert_wr_ptr_wrap_up: assert property (p_wr_ptr_wrap_up) ;
+    84                                               		cover_wr_ptr_wrap_up: cover property (p_wr_ptr_wrap_up) ;
+    85                                               		//FIFO_11
+    86                                               		property p_rd_ptr_wrap_up;
+    87                                               			@(posedge fifo_if.clk) disable iff (!fifo_if.rst_n) 
+    88                                               			(fifo_if.rd_en && rd_ptr == FIFO_DEPTH-1 && !fifo_if.empty ) ##1 (fifo_if.rd_en && !fifo_if.empty) |-> (rd_ptr == 0);
+    89                                               		endproperty
+    90                                               		assert_rd_ptr_wrap_up: assert property (p_rd_ptr_wrap_up) ;
+    91                                               		cover_rd_ptr_wrap_up: cover property (p_rd_ptr_wrap_up) ;
+    92                                               		//FIFO_12
+    93                                               		property p_count_up;
+    94                                               			@(posedge fifo_if.clk) disable iff (!fifo_if.rst_n) 
+    95                                               			({fifo_if.wr_en, fifo_if.rd_en} == 2'b10 && !fifo_if.full) |=> (count == $past(count) + 1'b1);
+    96                                               		endproperty
+    97                                               		assert_count_up: assert property (p_count_up) ;
+    98                                               		cover_count_up: cover property (p_count_up) ;
+    99                                               		//FIFO_13
+    100                                              		property p_count_down;
+    101                                              			@(posedge fifo_if.clk) disable iff (!fifo_if.rst_n) 
+    102                                              			({fifo_if.wr_en, fifo_if.rd_en} == 2'b01 && !fifo_if.empty) |=> (count == $past(count) - 1'b1);
+    103                                              		endproperty
+    104                                              		assert_count_down: assert property (p_count_down) ;
+    105                                              		cover_count_down: cover property (p_count_down) ;
+    106                                              		//FIFO_14
+    107                                              		property pointer_threshold;
+    108                                              			@(posedge fifo_if.clk) disable iff (!fifo_if.rst_n)
+    109                                              			!(wr_ptr >= FIFO_DEPTH) && !(rd_ptr >= FIFO_DEPTH) && !(count > FIFO_DEPTH);
+    110                                              		endproperty
+    111                                              		assert_pointer_threshold : assert property (pointer_threshold);
+    112                                              		cover_pointer_threshold  : cover  property (pointer_threshold);
+    113                                              	
+    114                                              	`endif
+    115                                              	
+    116             1                        249     	always @(posedge fifo_if.clk or negedge fifo_if.rst_n) begin
+    117                                              		if (!fifo_if.rst_n) begin
+    118             1                        104     			wr_ptr <= 0;
+    119             1                        104     			fifo_if.wr_ack <=0; // bugs
+    120             1                        104     			fifo_if.overflow <= 0;//bugs
+    121                                              		end
+    122                                              		else if (fifo_if.wr_en && count < FIFO_DEPTH) begin
+    123             1                         62     			mem[wr_ptr] <= fifo_if.data_in;
+    124             1                         62     			fifo_if.wr_ack <= 1;
+    125             1                         62     			wr_ptr <= wr_ptr + 1;
+    126             1                         62     			fifo_if.overflow <=0; //bugs
+    127                                              		end
+    128                                              		else begin 
+    129             1                         83     			fifo_if.wr_ack <= 0; 
+    130                                              			if (fifo_if.full && fifo_if.wr_en) //bugs &&
+    131             1                         38     				fifo_if.overflow <= 1;
+    132                                              			else
+    133             1                         45     				fifo_if.overflow <= 0;
+    134                                              		end
+    135                                              	end
+    136                                              	
+    137             1                        249     	always @(posedge fifo_if.clk or negedge fifo_if.rst_n) begin
+    138                                              		if (!fifo_if.rst_n) begin
+    139             1                        104     			rd_ptr <= 0;
+    140             1                        104     			fifo_if.underflow <= 0; // bugs
+    141                                              		
+    142                                              		end
+    143                                              		else if (fifo_if.rd_en && count != 0) begin
+    144             1                         50     			fifo_if.data_out <= mem[rd_ptr];
+    145             1                         50     			rd_ptr <= rd_ptr + 1;
+    146             1                         50     			fifo_if.underflow <= 0; // bugs
+    147                                              		end
+    148                                              		else begin
+    149                                              			if (fifo_if.empty && fifo_if.rd_en) // bugs &&
+    150             1                          7     				fifo_if.underflow <= 1;
+    151                                              			else
+    152             1                         88     				fifo_if.underflow <= 0;
+    153                                              		end
+    154                                              	end
+    155                                              	
+    156             1                        196     	always @(posedge fifo_if.clk or negedge fifo_if.rst_n) begin
+    157                                              		if (!fifo_if.rst_n) begin
+    158             1                         80     			count <= 0;
+    159                                              		end
+    160                                              		else begin
+    161                                              			if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b10) && !fifo_if.full) 
+    162             1                         39     				count <= count + 1;
+    163                                              			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b01) && !fifo_if.empty) 
+    164             1                         20     				count <= count - 1;
+    165                                              			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b11) && fifo_if.empty) 
+    166             1                          2     				count <= count+1;
+    167                                              			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b11) && fifo_if.full)
+    168             1                          9     				count <= count-1;
+    169                                              			else 
+    170             1                         46     				count <= count;
+    171                                              
+    172                                              		end
+    173                                              	end
+    174                                              	
+    175             1                         78     		assign fifo_if.full = (count == FIFO_DEPTH)? 1 : 0;
+    176             1                         78     		assign fifo_if.empty = (count == 0)? 1 : 0;
+    177                                              		//fifo_if.underflow = (fifo_if.empty && fifo_if.rd_en)? 1 : 0; // sequential output
+    178             1                         78     		assign fifo_if.almostfull = (count == FIFO_DEPTH-1)? 1 : 0; // error in design, should be FIFO_DEPTH-1
+    179             1                         78     		assign fifo_if.almostempty = (count == 1)? 1 : 0;
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         20        20         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /\top#DUT  --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                        count[3-0]           1           1      100.00 
+                                       rd_ptr[2-0]           1           1      100.00 
+                                       wr_ptr[2-0]           1           1      100.00 
+
+Total Node Count     =         10 
+Toggled Node Count   =         10 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (20 of 20 bins)
+
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT /cover_reset                   FIFO   Verilog  SVA  FIFO.sv(30)       11 Covered   
+/\top#DUT /cover_full                    FIFO   Verilog  SVA  FIFO.sv(35)       17 Covered   
+/\top#DUT /cover_empty                   FIFO   Verilog  SVA  FIFO.sv(40)       23 Covered   
+/\top#DUT /cover_almostfull              FIFO   Verilog  SVA  FIFO.sv(45)       30 Covered   
+/\top#DUT /cover_almostempty             FIFO   Verilog  SVA  FIFO.sv(50)       25 Covered   
+/\top#DUT /cover_wr_ack                  FIFO   Verilog  SVA  FIFO.sv(63)       56 Covered   
+/\top#DUT /cover_overflow                FIFO   Verilog  SVA  FIFO.sv(70)       38 Covered   
+/\top#DUT /cover_underflow               FIFO   Verilog  SVA  FIFO.sv(77)        4 Covered   
+/\top#DUT /cover_wr_ptr_wrap_up          FIFO   Verilog  SVA  FIFO.sv(84)        4 Covered   
+/\top#DUT /cover_rd_ptr_wrap_up          FIFO   Verilog  SVA  FIFO.sv(91)        4 Covered   
+/\top#DUT /cover_count_up                FIFO   Verilog  SVA  FIFO.sv(98)       34 Covered   
+/\top#DUT /cover_count_down              FIFO   Verilog  SVA  FIFO.sv(105)      20 Covered   
+/\top#DUT /cover_pointer_threshold       FIFO   Verilog  SVA  FIFO.sv(112)     145 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 13
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT /assert_reset
+                     FIFO.sv(29)                        0          1
+/\top#DUT /assert_full
+                     FIFO.sv(34)                        0          1
+/\top#DUT /assert_empty
+                     FIFO.sv(39)                        0          1
+/\top#DUT /assert_almostfull
+                     FIFO.sv(44)                        0          1
+/\top#DUT /assert_almostempty
+                     FIFO.sv(49)                        0          1
+/\top#DUT /assert_wr_ack
+                     FIFO.sv(62)                        0          1
+/\top#DUT /assert_overflow
+                     FIFO.sv(69)                        0          1
+/\top#DUT /assert_underflow
+                     FIFO.sv(76)                        0          1
+/\top#DUT /assert_wr_ptr_wrap_up
+                     FIFO.sv(83)                        0          1
+/\top#DUT /assert_rd_ptr_wrap_up
+                     FIFO.sv(90)                        0          1
+/\top#DUT /assert_count_up
+                     FIFO.sv(97)                        0          1
+/\top#DUT /assert_count_down
+                     FIFO.sv(104)                       0          1
+/\top#DUT /assert_pointer_threshold
+                     FIFO.sv(111)                       0          1
+
+Total Coverage By Instance (filtered view): 100.00%
+

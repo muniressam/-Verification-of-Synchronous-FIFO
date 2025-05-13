@@ -1,0 +1,2370 @@
+# vsim -voptargs="+acc" work.top -coverage 
+# Start time: 23:31:53 on May 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading work.FIFO_interface(fast__1)
+# Loading work.FIFO(fast)
+# Loading work.shared_pkg(fast)
+# Loading work.FIFO_transaction_pkg(fast)
+# Loading work.FIFO_tb_sv_unit(fast)
+# Loading work.FIFO_tb(fast)
+# Loading work.FIFO_coverage_pkg(fast)
+# Loading work.FIFO_scoreboard_pkg(fast)
+# Loading work.FIFO_monitor_sv_unit(fast)
+# Loading work.FIFO_monitor(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: 4G  Hostname: MOUNIR  ProcessID: 33712
+#           Attempting to use alternate WLF file "./wlft583ihr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft583ihr
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=0
+# Expected: data_out=x
+# Received: data_out=x
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=0
+# Expected: data_out=x
+# Received: data_out=x
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=9999
+# Expected: data_out=x
+# Received: data_out=x
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=7777
+# Expected: data_out=9999
+# Received: data_out=9999
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=8888
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=33e9
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=fa87
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=c046
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=72c2
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=4402
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=4458
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=e4c0
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ed31
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7239
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=2cf9
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=2cf9
+# Expected: data_out=33e9
+# Received: data_out=33e9
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=2cf9
+# Expected: data_out=fa87
+# Received: data_out=fa87
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e22f
+# Expected: data_out=c046
+# Received: data_out=c046
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=c0b7
+# Expected: data_out=72c2
+# Received: data_out=72c2
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e6a0
+# Expected: data_out=4402
+# Received: data_out=4402
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=5fa3
+# Expected: data_out=4458
+# Received: data_out=4458
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e482
+# Expected: data_out=e4c0
+# Received: data_out=e4c0
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=d2d
+# Expected: data_out=ed31
+# Received: data_out=ed31
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=ab12
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=df9d
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e679
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=9242
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=f9c8
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=a134
+# Expected: data_out=f9c8
+# Received: data_out=f9c8
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=6525
+# Expected: data_out=a134
+# Received: data_out=a134
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=7409
+# Expected: data_out=6525
+# Received: data_out=6525
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=1b5
+# Expected: data_out=7409
+# Received: data_out=7409
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=c5b8
+# Expected: data_out=1b5
+# Received: data_out=1b5
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=2bcc
+# Expected: data_out=c5b8
+# Received: data_out=c5b8
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=de7f
+# Expected: data_out=2bcc
+# Received: data_out=2bcc
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=b23e
+# Expected: data_out=de7f
+# Received: data_out=de7f
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=db09
+# Expected: data_out=b23e
+# Received: data_out=b23e
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=4be3
+# Expected: data_out=b23e
+# Received: data_out=b23e
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=4212
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=857f
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7c7c
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=92af
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=fabf
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=d43f
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=386a
+# Expected: data_out=4212
+# Received: data_out=4212
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=4bfe
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6d16
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3fce
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6b93
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=f38a
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=e513
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=2b6d
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=2fc0
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6606
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6f38
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=8fd3
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=553
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=cdfc
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=3395
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=a83d
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=96fc
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=515f
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=4433
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=8877
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=22de
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ecc0
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3d79
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=655b
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=f8b2
+# Expected: data_out=92af
+# Received: data_out=92af
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6f0a
+# Expected: data_out=92af
+# Received: data_out=92af
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=f6e0
+# Expected: data_out=d43f
+# Received: data_out=d43f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=70d7
+# Expected: data_out=d43f
+# Received: data_out=d43f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=8417
+# Expected: data_out=d43f
+# Received: data_out=d43f
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=a627
+# Expected: data_out=386a
+# Received: data_out=386a
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=8c69
+# Expected: data_out=386a
+# Received: data_out=386a
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=d46f
+# Expected: data_out=386a
+# Received: data_out=386a
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=62ef
+# Expected: data_out=4bfe
+# Received: data_out=4bfe
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=ba0d
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=9b21
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=5bef
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=704f
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7ce7
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=b6bf
+# Expected: data_out=3fce
+# Received: data_out=3fce
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=1c96
+# Expected: data_out=3fce
+# Received: data_out=3fce
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=2fab
+# Expected: data_out=3fce
+# Received: data_out=3fce
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=9538
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=4de9
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=354a
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=484a
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=bc45
+# Expected: data_out=ecc0
+# Received: data_out=ecc0
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=238e
+# Expected: data_out=ecc0
+# Received: data_out=ecc0
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=cbfb
+# Expected: data_out=ecc0
+# Received: data_out=ecc0
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=9dac
+# Expected: data_out=6f0a
+# Received: data_out=6f0a
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=cc9b
+# Expected: data_out=70d7
+# Received: data_out=70d7
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=a632
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=3691
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=f377
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3ff2
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ca4a
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3737
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=98cf
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=18c5
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=7683
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=b9cd
+# Expected: data_out=ba0d
+# Received: data_out=ba0d
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7a59
+# Expected: data_out=ba0d
+# Received: data_out=ba0d
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=f652
+# Expected: data_out=ba0d
+# Received: data_out=ba0d
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=d2f1
+# Expected: data_out=9b21
+# Received: data_out=9b21
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=7975
+# Expected: data_out=1c96
+# Received: data_out=1c96
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=65c4
+# Expected: data_out=1c96
+# Received: data_out=1c96
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=e6c4
+# Expected: data_out=4de9
+# Received: data_out=4de9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=3749
+# Expected: data_out=238e
+# Received: data_out=238e
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=5833
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ce2e
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=cf6b
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7ec
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=42fb
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=1928
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=9d27
+# Expected: data_out=f377
+# Received: data_out=f377
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ebea
+# Expected: data_out=f377
+# Received: data_out=f377
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=5faf
+# Expected: data_out=f377
+# Received: data_out=f377
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=6ae0
+# Expected: data_out=3ff2
+# Received: data_out=3ff2
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=383b
+# Expected: data_out=3ff2
+# Received: data_out=3ff2
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=5b74
+# Expected: data_out=7a59
+# Received: data_out=7a59
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=31b4
+# Expected: data_out=7a59
+# Received: data_out=7a59
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=11e7
+# Expected: data_out=7a59
+# Received: data_out=7a59
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=d9e7
+# Expected: data_out=65c4
+# Received: data_out=65c4
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=6954
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=f0c7
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=fbb9
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=b8c4
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=68c2
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=492e
+# Expected: data_out=5833
+# Received: data_out=5833
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=e0cf
+# Expected: data_out=ce2e
+# Received: data_out=ce2e
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e104
+# Expected: data_out=cf6b
+# Received: data_out=cf6b
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=313d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=c5f7
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3932
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=ec38
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=76e8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=6e7b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7fd8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=9346
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=28e8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=373e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=af27
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=4fb2
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=ec02
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=1f78
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=f65b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=7f56
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=4961
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=5df5
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=722d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=e1d8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=16f6
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=97b0
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=153b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=3910
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=4a45
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=928f
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=a80e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=656
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=a693
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=499
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=f944
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=c31
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=f66d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=3151
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=1115
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=8c76
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=5bde
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=3a73
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=db28
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=924e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3904
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=d6a9
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=99f1
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=d5a9
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d91e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=6a10
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=6856
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=7a42
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c58b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=8e22
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=6455
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=c27
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=9f28
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=3578
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c611
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=cf72
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7102
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=369c
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=eb68
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=9683
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d563
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=68f7
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=ff5
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=a0db
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=f7dd
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=d4b0
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=4462
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=b363
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=556b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=a7ab
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=bf06
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d1b5
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=8ab6
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=870f
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=5cca
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=fed
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c76a
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=f1e1
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=4092
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d2e0
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=f42d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=7592
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=318e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=59b4
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=3eb4
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=c219
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=7a1e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=3777
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=bc6f
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=850
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=25ee
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=1ca9
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c04
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=627b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=c876
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=4cd6
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=9c5a
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=f29e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=1873
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=7868
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7c9c
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=fd1c
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=963d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# Test Finished:1
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=963d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# at time 476 Test finished, With correct count: 238, Error count: 0
+# i get in here
+# ** Note: $stop    : FIFO_monitor.sv(41)
+#    Time: 476 ns  Iteration: 1  Instance: /top/MONITOR
+# Break in Module FIFO_monitor at FIFO_monitor.sv line 41
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 23:32:20 on May 07,2025
+# vcover report FIFO.ucdb -details -annotate -all -output coverage_FIFO.txt 
+# End time: 23:32:20 on May 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 00:12:52 on May 08,2025
+# vlog -reportprogress 300 -f src_files.list "+cover" -covercells "+define+SIM" 
+# -- Compiling module FIFO
+# -- Compiling interface FIFO_interface
+# -- Compiling package shared_pkg
+# -- Compiling package FIFO_transaction_pkg
+# -- Importing package shared_pkg
+# -- Compiling package FIFO_scoreboard_pkg
+# -- Importing package FIFO_transaction_pkg
+# -- Compiling package FIFO_coverage_pkg
+# -- Compiling package FIFO_monitor_sv_unit
+# -- Importing package FIFO_scoreboard_pkg
+# -- Importing package FIFO_coverage_pkg
+# -- Compiling module FIFO_monitor
+# -- Compiling package FIFO_tb_sv_unit
+# -- Compiling module FIFO_tb
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 00:12:52 on May 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/intelFPGA/ver_diploma/Final_Project/FIFO/demo_fifo.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/intelFPGA/ver_diploma/Final_Project/FIFO/demo_fifo.mpf).  File can not be renamed.
+# Saving coverage database on exit...
+# End time: 00:13:03 on May 08,2025, Elapsed time: 0:41:10
+# Errors: 2, Warnings: 3
+# vsim -voptargs="+acc" work.top -coverage 
+# Start time: 00:13:03 on May 08,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading work.FIFO_interface(fast__1)
+# Loading work.FIFO(fast)
+# Loading work.shared_pkg(fast)
+# Loading work.FIFO_transaction_pkg(fast)
+# Loading work.FIFO_tb_sv_unit(fast)
+# Loading work.FIFO_tb(fast)
+# Loading work.FIFO_coverage_pkg(fast)
+# Loading work.FIFO_scoreboard_pkg(fast)
+# Loading work.FIFO_monitor_sv_unit(fast)
+# Loading work.FIFO_monitor(fast)
+# ** Error: (vsim-3766) The modport 'DUT' was not found in interface 'FIFO_interface'.
+#    Time: 0 ns  Iteration: 0  Instance: /top/DUT File: FIFO.sv
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 4
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 00:14:22 on May 08,2025
+# vlog -reportprogress 300 -f src_files.list "+cover" -covercells "+define+SIM" 
+# -- Compiling module FIFO
+# -- Compiling interface FIFO_interface
+# -- Compiling package shared_pkg
+# -- Compiling package FIFO_transaction_pkg
+# -- Importing package shared_pkg
+# -- Compiling package FIFO_scoreboard_pkg
+# -- Importing package FIFO_transaction_pkg
+# -- Compiling package FIFO_coverage_pkg
+# -- Compiling package FIFO_monitor_sv_unit
+# -- Importing package FIFO_scoreboard_pkg
+# -- Importing package FIFO_coverage_pkg
+# -- Compiling module FIFO_monitor
+# -- Compiling package FIFO_tb_sv_unit
+# -- Compiling module FIFO_tb
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 00:14:22 on May 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.top -coverage 
+# Start time: 00:13:03 on May 08,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading work.FIFO_interface(fast__1)
+# Loading work.FIFO(fast)
+# Loading work.shared_pkg(fast)
+# Loading work.FIFO_transaction_pkg(fast)
+# Loading work.FIFO_tb_sv_unit(fast)
+# Loading work.FIFO_tb(fast)
+# Loading work.FIFO_coverage_pkg(fast)
+# Loading work.FIFO_scoreboard_pkg(fast)
+# Loading work.FIFO_monitor_sv_unit(fast)
+# Loading work.FIFO_monitor(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: 4G  Hostname: MOUNIR  ProcessID: 33712
+#           Attempting to use alternate WLF file "./wlftrj4rac".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrj4rac
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=0
+# Expected: data_out=x
+# Received: data_out=x
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=0
+# Expected: data_out=x
+# Received: data_out=x
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=9999
+# Expected: data_out=x
+# Received: data_out=x
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=7777
+# Expected: data_out=9999
+# Received: data_out=9999
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=8888
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=33e9
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=fa87
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=c046
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=72c2
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=4402
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=4458
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=e4c0
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ed31
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7239
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=2cf9
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=2cf9
+# Expected: data_out=33e9
+# Received: data_out=33e9
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=2cf9
+# Expected: data_out=fa87
+# Received: data_out=fa87
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e22f
+# Expected: data_out=c046
+# Received: data_out=c046
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=c0b7
+# Expected: data_out=72c2
+# Received: data_out=72c2
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e6a0
+# Expected: data_out=4402
+# Received: data_out=4402
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=5fa3
+# Expected: data_out=4458
+# Received: data_out=4458
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e482
+# Expected: data_out=e4c0
+# Received: data_out=e4c0
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=d2d
+# Expected: data_out=ed31
+# Received: data_out=ed31
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=ab12
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=df9d
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e679
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=9242
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=f9c8
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=a134
+# Expected: data_out=f9c8
+# Received: data_out=f9c8
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=6525
+# Expected: data_out=a134
+# Received: data_out=a134
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=7409
+# Expected: data_out=6525
+# Received: data_out=6525
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=1b5
+# Expected: data_out=7409
+# Received: data_out=7409
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=c5b8
+# Expected: data_out=1b5
+# Received: data_out=1b5
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=2bcc
+# Expected: data_out=c5b8
+# Received: data_out=c5b8
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=de7f
+# Expected: data_out=2bcc
+# Received: data_out=2bcc
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=b23e
+# Expected: data_out=de7f
+# Received: data_out=de7f
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=db09
+# Expected: data_out=b23e
+# Received: data_out=b23e
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=4be3
+# Expected: data_out=b23e
+# Received: data_out=b23e
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=4212
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=857f
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7c7c
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=92af
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=fabf
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=d43f
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=386a
+# Expected: data_out=4212
+# Received: data_out=4212
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=4bfe
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6d16
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3fce
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6b93
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=f38a
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=e513
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=2b6d
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=2fc0
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6606
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6f38
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=8fd3
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=553
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=cdfc
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=3395
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=a83d
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=96fc
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=515f
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=4433
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=8877
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=22de
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ecc0
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3d79
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=655b
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=f8b2
+# Expected: data_out=92af
+# Received: data_out=92af
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6f0a
+# Expected: data_out=92af
+# Received: data_out=92af
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=f6e0
+# Expected: data_out=d43f
+# Received: data_out=d43f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=70d7
+# Expected: data_out=d43f
+# Received: data_out=d43f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=8417
+# Expected: data_out=d43f
+# Received: data_out=d43f
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=a627
+# Expected: data_out=386a
+# Received: data_out=386a
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=8c69
+# Expected: data_out=386a
+# Received: data_out=386a
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=d46f
+# Expected: data_out=386a
+# Received: data_out=386a
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=62ef
+# Expected: data_out=4bfe
+# Received: data_out=4bfe
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=ba0d
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=9b21
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=5bef
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=704f
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7ce7
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=b6bf
+# Expected: data_out=3fce
+# Received: data_out=3fce
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=1c96
+# Expected: data_out=3fce
+# Received: data_out=3fce
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=2fab
+# Expected: data_out=3fce
+# Received: data_out=3fce
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=9538
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=4de9
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=354a
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=484a
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=bc45
+# Expected: data_out=ecc0
+# Received: data_out=ecc0
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=238e
+# Expected: data_out=ecc0
+# Received: data_out=ecc0
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=cbfb
+# Expected: data_out=ecc0
+# Received: data_out=ecc0
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=9dac
+# Expected: data_out=6f0a
+# Received: data_out=6f0a
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=cc9b
+# Expected: data_out=70d7
+# Received: data_out=70d7
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=a632
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=3691
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=f377
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3ff2
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ca4a
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3737
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=98cf
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=18c5
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=7683
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=b9cd
+# Expected: data_out=ba0d
+# Received: data_out=ba0d
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7a59
+# Expected: data_out=ba0d
+# Received: data_out=ba0d
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=f652
+# Expected: data_out=ba0d
+# Received: data_out=ba0d
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=d2f1
+# Expected: data_out=9b21
+# Received: data_out=9b21
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=7975
+# Expected: data_out=1c96
+# Received: data_out=1c96
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=65c4
+# Expected: data_out=1c96
+# Received: data_out=1c96
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=e6c4
+# Expected: data_out=4de9
+# Received: data_out=4de9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=3749
+# Expected: data_out=238e
+# Received: data_out=238e
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=5833
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ce2e
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=cf6b
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7ec
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=42fb
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=1928
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=9d27
+# Expected: data_out=f377
+# Received: data_out=f377
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ebea
+# Expected: data_out=f377
+# Received: data_out=f377
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=5faf
+# Expected: data_out=f377
+# Received: data_out=f377
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=6ae0
+# Expected: data_out=3ff2
+# Received: data_out=3ff2
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=383b
+# Expected: data_out=3ff2
+# Received: data_out=3ff2
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=5b74
+# Expected: data_out=7a59
+# Received: data_out=7a59
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=31b4
+# Expected: data_out=7a59
+# Received: data_out=7a59
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=11e7
+# Expected: data_out=7a59
+# Received: data_out=7a59
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=d9e7
+# Expected: data_out=65c4
+# Received: data_out=65c4
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=6954
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=f0c7
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=fbb9
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=b8c4
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=68c2
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=492e
+# Expected: data_out=5833
+# Received: data_out=5833
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=e0cf
+# Expected: data_out=ce2e
+# Received: data_out=ce2e
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e104
+# Expected: data_out=cf6b
+# Received: data_out=cf6b
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=313d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=c5f7
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3932
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=ec38
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=76e8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=6e7b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7fd8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=9346
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=28e8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=373e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=af27
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=4fb2
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=ec02
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=1f78
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=f65b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=7f56
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=4961
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=5df5
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=722d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=e1d8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=16f6
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=97b0
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=153b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=3910
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=4a45
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=928f
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=a80e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=656
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=a693
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=499
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=f944
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=c31
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=f66d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=3151
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=1115
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=8c76
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=5bde
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=3a73
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=db28
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=924e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3904
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=d6a9
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=99f1
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=d5a9
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d91e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=6a10
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=6856
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=7a42
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c58b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=8e22
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=6455
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=c27
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=9f28
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=3578
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c611
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=cf72
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7102
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=369c
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=eb68
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=9683
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d563
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=68f7
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=ff5
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=a0db
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=f7dd
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=d4b0
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=4462
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=b363
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=556b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=a7ab
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=bf06
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d1b5
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=8ab6
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=870f
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=5cca
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=fed
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c76a
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=f1e1
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=4092
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d2e0
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=f42d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=7592
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=318e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=59b4
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=3eb4
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=c219
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=7a1e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=3777
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=bc6f
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=850
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=25ee
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=1ca9
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c04
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=627b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=c876
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=4cd6
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=9c5a
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=f29e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=1873
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=7868
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7c9c
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=fd1c
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=963d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# Test Finished:1
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=963d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# at time 476 Test finished, With correct count: 238, Error count: 0
+# i get in here
+# ** Note: $stop    : FIFO_monitor.sv(41)
+#    Time: 476 ns  Iteration: 1  Instance: /top/MONITOR
+# Break in Module FIFO_monitor at FIFO_monitor.sv line 41
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 00:14:47 on May 08,2025
+# vcover report FIFO.ucdb -details -annotate -all -output coverage_FIFO.txt 
+# End time: 00:14:47 on May 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+add wave -position insertpoint sim:/top/DUT/*
+add wave -position insertpoint sim:/top/fifo_if/*
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 00:39:32 on May 08,2025
+# vlog -reportprogress 300 -f src_files.list "+cover" -covercells "+define+SIM" 
+# -- Compiling module FIFO
+# -- Compiling interface FIFO_interface
+# -- Compiling package shared_pkg
+# -- Compiling package FIFO_transaction_pkg
+# -- Importing package shared_pkg
+# -- Compiling package FIFO_scoreboard_pkg
+# -- Importing package FIFO_transaction_pkg
+# -- Compiling package FIFO_coverage_pkg
+# -- Compiling package FIFO_monitor_sv_unit
+# -- Importing package FIFO_scoreboard_pkg
+# -- Importing package FIFO_coverage_pkg
+# -- Compiling module FIFO_monitor
+# -- Compiling package FIFO_tb_sv_unit
+# -- Compiling module FIFO_tb
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 00:39:32 on May 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/intelFPGA/ver_diploma/Final_Project/FIFO/demo_fifo.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/intelFPGA/ver_diploma/Final_Project/FIFO/demo_fifo.mpf).  File can not be renamed.
+# Saving coverage database on exit...
+# End time: 00:39:43 on May 08,2025, Elapsed time: 0:26:40
+# Errors: 3, Warnings: 3
+# vsim -voptargs="+acc" work.top -coverage 
+# Start time: 00:39:43 on May 08,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading work.FIFO_interface(fast__1)
+# Loading work.FIFO(fast)
+# Loading work.shared_pkg(fast)
+# Loading work.FIFO_transaction_pkg(fast)
+# Loading work.FIFO_tb_sv_unit(fast)
+# Loading work.FIFO_tb(fast)
+# Loading work.FIFO_coverage_pkg(fast)
+# Loading work.FIFO_scoreboard_pkg(fast)
+# Loading work.FIFO_monitor_sv_unit(fast)
+# Loading work.FIFO_monitor(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: 4G  Hostname: MOUNIR  ProcessID: 33712
+#           Attempting to use alternate WLF file "./wlft6n0ax6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6n0ax6
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=0
+# Expected: data_out=x
+# Received: data_out=x
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=0
+# Expected: data_out=x
+# Received: data_out=x
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=9999
+# Expected: data_out=x
+# Received: data_out=x
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=7777
+# Expected: data_out=9999
+# Received: data_out=9999
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=8888
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=33e9
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=fa87
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=c046
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=72c2
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=4402
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=4458
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=e4c0
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ed31
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7239
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=2cf9
+# Expected: data_out=7777
+# Received: data_out=7777
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=2cf9
+# Expected: data_out=33e9
+# Received: data_out=33e9
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=2cf9
+# Expected: data_out=fa87
+# Received: data_out=fa87
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e22f
+# Expected: data_out=c046
+# Received: data_out=c046
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=c0b7
+# Expected: data_out=72c2
+# Received: data_out=72c2
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e6a0
+# Expected: data_out=4402
+# Received: data_out=4402
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=5fa3
+# Expected: data_out=4458
+# Received: data_out=4458
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e482
+# Expected: data_out=e4c0
+# Received: data_out=e4c0
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=d2d
+# Expected: data_out=ed31
+# Received: data_out=ed31
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=ab12
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=df9d
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e679
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=9242
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=f9c8
+# Expected: data_out=2cf9
+# Received: data_out=2cf9
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=a134
+# Expected: data_out=f9c8
+# Received: data_out=f9c8
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=6525
+# Expected: data_out=a134
+# Received: data_out=a134
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=7409
+# Expected: data_out=6525
+# Received: data_out=6525
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=1b5
+# Expected: data_out=7409
+# Received: data_out=7409
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=c5b8
+# Expected: data_out=1b5
+# Received: data_out=1b5
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=2bcc
+# Expected: data_out=c5b8
+# Received: data_out=c5b8
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=de7f
+# Expected: data_out=2bcc
+# Received: data_out=2bcc
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=b23e
+# Expected: data_out=de7f
+# Received: data_out=de7f
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=db09
+# Expected: data_out=b23e
+# Received: data_out=b23e
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=4be3
+# Expected: data_out=b23e
+# Received: data_out=b23e
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=4212
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=857f
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7c7c
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=92af
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=fabf
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=d43f
+# Expected: data_out=db09
+# Received: data_out=db09
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=386a
+# Expected: data_out=4212
+# Received: data_out=4212
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=4bfe
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6d16
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3fce
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6b93
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=f38a
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=e513
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=2b6d
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=2fc0
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6606
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6f38
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=8fd3
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=553
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=cdfc
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=3395
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=a83d
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=96fc
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=515f
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=4433
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=8877
+# Expected: data_out=857f
+# Received: data_out=857f
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=22de
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ecc0
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3d79
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=655b
+# Expected: data_out=7c7c
+# Received: data_out=7c7c
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=f8b2
+# Expected: data_out=92af
+# Received: data_out=92af
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=6f0a
+# Expected: data_out=92af
+# Received: data_out=92af
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=f6e0
+# Expected: data_out=d43f
+# Received: data_out=d43f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=70d7
+# Expected: data_out=d43f
+# Received: data_out=d43f
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=8417
+# Expected: data_out=d43f
+# Received: data_out=d43f
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=a627
+# Expected: data_out=386a
+# Received: data_out=386a
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=8c69
+# Expected: data_out=386a
+# Received: data_out=386a
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=d46f
+# Expected: data_out=386a
+# Received: data_out=386a
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=62ef
+# Expected: data_out=4bfe
+# Received: data_out=4bfe
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=ba0d
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=9b21
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=5bef
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=704f
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7ce7
+# Expected: data_out=6d16
+# Received: data_out=6d16
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=b6bf
+# Expected: data_out=3fce
+# Received: data_out=3fce
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=1c96
+# Expected: data_out=3fce
+# Received: data_out=3fce
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=2fab
+# Expected: data_out=3fce
+# Received: data_out=3fce
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=9538
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=4de9
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=354a
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=484a
+# Expected: data_out=6b93
+# Received: data_out=6b93
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=bc45
+# Expected: data_out=ecc0
+# Received: data_out=ecc0
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=238e
+# Expected: data_out=ecc0
+# Received: data_out=ecc0
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=cbfb
+# Expected: data_out=ecc0
+# Received: data_out=ecc0
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=9dac
+# Expected: data_out=6f0a
+# Received: data_out=6f0a
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=cc9b
+# Expected: data_out=70d7
+# Received: data_out=70d7
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=a632
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=3691
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=f377
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3ff2
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ca4a
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3737
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=98cf
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=18c5
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=7683
+# Expected: data_out=8c69
+# Received: data_out=8c69
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=b9cd
+# Expected: data_out=ba0d
+# Received: data_out=ba0d
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7a59
+# Expected: data_out=ba0d
+# Received: data_out=ba0d
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=f652
+# Expected: data_out=ba0d
+# Received: data_out=ba0d
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=d2f1
+# Expected: data_out=9b21
+# Received: data_out=9b21
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=7975
+# Expected: data_out=1c96
+# Received: data_out=1c96
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=65c4
+# Expected: data_out=1c96
+# Received: data_out=1c96
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=e6c4
+# Expected: data_out=4de9
+# Received: data_out=4de9
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=3749
+# Expected: data_out=238e
+# Received: data_out=238e
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=5833
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ce2e
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=cf6b
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7ec
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=42fb
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=1928
+# Expected: data_out=cc9b
+# Received: data_out=cc9b
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=9d27
+# Expected: data_out=f377
+# Received: data_out=f377
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=ebea
+# Expected: data_out=f377
+# Received: data_out=f377
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=5faf
+# Expected: data_out=f377
+# Received: data_out=f377
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=6ae0
+# Expected: data_out=3ff2
+# Received: data_out=3ff2
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=383b
+# Expected: data_out=3ff2
+# Received: data_out=3ff2
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=5b74
+# Expected: data_out=7a59
+# Received: data_out=7a59
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=31b4
+# Expected: data_out=7a59
+# Received: data_out=7a59
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=11e7
+# Expected: data_out=7a59
+# Received: data_out=7a59
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=d9e7
+# Expected: data_out=65c4
+# Received: data_out=65c4
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=6954
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=f0c7
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=fbb9
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=b8c4
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=68c2
+# Expected: data_out=e6c4
+# Received: data_out=e6c4
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=492e
+# Expected: data_out=5833
+# Received: data_out=5833
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=e0cf
+# Expected: data_out=ce2e
+# Received: data_out=ce2e
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=e104
+# Expected: data_out=cf6b
+# Received: data_out=cf6b
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=313d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=c5f7
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3932
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=ec38
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=76e8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=6e7b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7fd8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=9346
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=28e8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=373e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=af27
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=4fb2
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=ec02
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=1f78
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=f65b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=7f56
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=4961
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=5df5
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=722d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=e1d8
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=16f6
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=97b0
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=153b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=3910
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=1,data_in=4a45
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=928f
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=a80e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=656
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=a693
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=499
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=f944
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=c31
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=f66d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=3151
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=1115
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=8c76
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=5bde
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=3a73
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=db28
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=924e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=3904
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=d6a9
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=99f1
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=d5a9
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d91e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=6a10
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=6856
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=7a42
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c58b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=8e22
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=6455
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=c27
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=9f28
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=3578
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c611
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=cf72
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7102
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=369c
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=eb68
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=9683
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d563
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=68f7
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=ff5
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=a0db
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=f7dd
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=d4b0
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=4462
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=b363
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=556b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=a7ab
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=bf06
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d1b5
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=8ab6
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=870f
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=5cca
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=fed
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c76a
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=f1e1
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=4092
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=d2e0
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=f42d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=7592
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=318e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=0,data_in=59b4
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=3eb4
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=c219
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=7a1e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=3777
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=bc6f
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=850
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=25ee
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=1ca9
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=c04
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=627b
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=0 ,rd_en=1,data_in=c876
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=1,data_in=4cd6
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=9c5a
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=f29e
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=1873
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=1,data_in=7868
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=1 ,wr_en=1 ,rd_en=0,data_in=7c9c
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=1 ,rd_en=0,data_in=fd1c
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=963d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# Test Finished:1
+# rst_n=0 ,wr_en=0 ,rd_en=0,data_in=963d
+# Expected: data_out=ebea
+# Received: data_out=ebea
+# at time 476 Test finished, With correct count: 238, Error count: 0
+# i get in here
+# ** Note: $stop    : FIFO_monitor.sv(41)
+#    Time: 476 ns  Iteration: 1  Instance: /top/MONITOR
+# Break in Module FIFO_monitor at FIFO_monitor.sv line 41
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 00:40:07 on May 08,2025
+# vcover report FIFO.ucdb -details -annotate -all -output coverage_FIFO.txt 
+# End time: 00:40:07 on May 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+quit -sim
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/intelFPGA/ver_diploma/Final_Project/FIFO/demo_fifo.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/intelFPGA/ver_diploma/Final_Project/FIFO/demo_fifo.mpf).  File can not be renamed.
+# Saving coverage database on exit...
+# End time: 00:41:16 on May 08,2025, Elapsed time: 0:01:33
+# Errors: 2, Warnings: 3
+vcover report FIFO.ucdb -details -annotate -all -output coverage_FIFO.txt
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 00:41:19 on May 08,2025
+# vcover report FIFO.ucdb -details -annotate -all -output coverage_FIFO.txt 
+# End time: 00:41:19 on May 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

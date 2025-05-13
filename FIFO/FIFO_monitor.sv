@@ -1,0 +1,47 @@
+import shared_pkg::*;
+import FIFO_scoreboard_pkg::*;
+import FIFO_transaction_pkg::*;
+import FIFO_coverage_pkg::*;
+module FIFO_monitor (FIFO_interface.MONITOR fifo_if);
+    
+    FIFO_transaction tr= new();
+    FIFO_scoreboard sb= new();
+    FIFO_coverage cov= new();
+  
+    initial begin
+        forever begin
+            //wait(etrigger.triggered);
+            @(etrigger);
+            @(negedge fifo_if.clk);
+            tr.rst_n = fifo_if.rst_n;
+            tr.wr_en = fifo_if.wr_en;
+            tr.rd_en = fifo_if.rd_en;
+            tr.data_in = fifo_if.data_in;
+            tr.data_out = fifo_if.data_out;
+            tr.full = fifo_if.full;
+            tr.almostfull = fifo_if.almostfull;
+            tr.empty = fifo_if.empty;
+            tr.almostempty = fifo_if.almostempty;
+            tr.overflow = fifo_if.overflow;
+            tr.underflow = fifo_if.underflow;
+            tr.wr_ack = fifo_if.wr_ack;
+            
+            fork
+                begin
+                    cov.sample_data(tr);
+                end
+                begin
+                    sb.check_data(tr);
+                end
+            join
+            
+            if (test_finished == 1 ) begin 
+                $display("at time %0t Test finished, With correct count: %0d, Error count: %0d",$time, correct_count,error_count);
+                $display("i get in here");
+                $stop;
+            end
+
+        end
+    end
+    
+endmodule
