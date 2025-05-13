@@ -1,0 +1,48 @@
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 19:04:51 on May 06,2025
+# vlog -reportprogress 300 -f src_files.list "+cover" -covercells "+define+SIM" 
+# -- Compiling module FIFO
+# -- Compiling interface fifo_IF
+# -- Compiling module fifo_sva
+# -- Compiling package fifo_config_obj_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) fifo_config_obj.sv(3): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package fifo_driver_pkg
+# -- Importing package fifo_config_obj_pkg
+# -- Importing package fifo_seq_item_pkg
+# -- Compiling package fifo_monitor_pkg
+# -- Compiling package fifo_seq_item_pkg
+# ** Warning: fifo_seq_item.sv(39): (vlog-2643) Unterminated string literal continues onto next line.
+# ** Warning: fifo_seq_item.sv(45): (vlog-2643) Unterminated string literal continues onto next line.
+# -- Compiling package fifo_sequencer_pkg
+# -- Compiling package fifo_agent_pkg
+# -- Importing package fifo_sequencer_pkg
+# -- Importing package fifo_driver_pkg
+# -- Importing package fifo_monitor_pkg
+# -- Compiling package fifo_scoreboard_pkg
+# -- Compiling package fifo_coverage_pkg
+# -- Compiling package fifo_env_pkg
+# -- Importing package fifo_agent_pkg
+# -- Importing package fifo_scoreboard_pkg
+# -- Importing package fifo_coverage_pkg
+# -- Compiling package fifo_reset_seq_pkg
+# -- Compiling package fifo_write_seq_pkg
+# -- Compiling package fifo_read_seq_pkg
+# -- Compiling package fifo_write_read_seq_pkg
+# -- Compiling package fifo_test_pkg
+# -- Importing package fifo_env_pkg
+# -- Importing package fifo_reset_seq_pkg
+# -- Importing package fifo_write_seq_pkg
+# -- Importing package fifo_read_seq_pkg
+# -- Importing package fifo_write_read_seq_pkg
+# -- Compiling package top_sv_unit
+# -- Importing package fifo_test_pkg
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 19:04:51 on May 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2

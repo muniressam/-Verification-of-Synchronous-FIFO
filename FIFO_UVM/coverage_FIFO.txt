@@ -1,0 +1,867 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /\top#DUT /sva
+=== Design Unit: work.fifo_sva
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      13        13         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT /sva/assert_reset
+                     fifo_sva.sv(9)                     0          1
+/\top#DUT /sva/assert_full
+                     fifo_sva.sv(14)                    0          1
+/\top#DUT /sva/assert_empty
+                     fifo_sva.sv(19)                    0          1
+/\top#DUT /sva/assert_almostfull
+                     fifo_sva.sv(24)                    0          1
+/\top#DUT /sva/assert_almostempty
+                     fifo_sva.sv(29)                    0          1
+/\top#DUT /sva/assert_wr_ack
+                     fifo_sva.sv(39)                    0          1
+/\top#DUT /sva/assert_overflow
+                     fifo_sva.sv(46)                    0          1
+/\top#DUT /sva/assert_underflow
+                     fifo_sva.sv(53)                    0          1
+/\top#DUT /sva/assert_wr_ptr_wrap_up
+                     fifo_sva.sv(60)                    0          1
+/\top#DUT /sva/assert_rd_ptr_wrap_up
+                     fifo_sva.sv(67)                    0          1
+/\top#DUT /sva/assert_count_up
+                     fifo_sva.sv(74)                    0          1
+/\top#DUT /sva/assert_count_down
+                     fifo_sva.sv(81)                    0          1
+/\top#DUT /sva/assert_pointer_threshold
+                     fifo_sva.sv(88)                    0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\top#DUT /sva
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fifo_sva.sv
+------------------------------------IF Branch------------------------------------
+    8                                        136     Count coming in to IF
+    8               1                         16             if(!fifo_if.rst_n) begin
+                                             120     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    13                                       136     Count coming in to IF
+    13              1                         20             if(FIFO.count == FIFO_DEPTH) begin
+                                             116     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    18                                       136     Count coming in to IF
+    18              1                         20             if (FIFO.count == 0) begin
+                                             116     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    23                                       136     Count coming in to IF
+    23              1                         33             if (FIFO.count == FIFO_DEPTH-1) begin // error in design, should be FIFO_DEPTH-1
+                                             103     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    28                                       136     Count coming in to IF
+    28              1                         17             if (FIFO.count == 1) begin
+                                             119     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       4         4         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /\top#DUT /sva --
+
+  File fifo_sva.sv
+----------------Focused Condition View-------------------
+Line       13 Item    1  (FIFO.count == 8)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (FIFO.count == 8)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (FIFO.count == 8)_0   -                             
+  Row   2:          1  (FIFO.count == 8)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       18 Item    1  (FIFO.count == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (FIFO.count == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (FIFO.count == 0)_0   -                             
+  Row   2:          1  (FIFO.count == 0)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       23 Item    1  (FIFO.count == (8 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+  (FIFO.count == (8 - 1))         Y
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:          1  (FIFO.count == (8 - 1))_0  -                             
+  Row   2:          1  (FIFO.count == (8 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       28 Item    1  (FIFO.count == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (FIFO.count == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (FIFO.count == 1)_0   -                             
+  Row   2:          1  (FIFO.count == 1)_1   -                             
+
+
+
+Directive Coverage:
+    Directives                      13        13         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT /sva/cover_reset               fifo_sva Verilog  SVA  fifo_sva.sv(10)    9 Covered   
+/\top#DUT /sva/cover_full                fifo_sva Verilog  SVA  fifo_sva.sv(15)   20 Covered   
+/\top#DUT /sva/cover_empty               fifo_sva Verilog  SVA  fifo_sva.sv(20)   20 Covered   
+/\top#DUT /sva/cover_almostfull          fifo_sva Verilog  SVA  fifo_sva.sv(25)   33 Covered   
+/\top#DUT /sva/cover_almostempty         fifo_sva Verilog  SVA  fifo_sva.sv(30)   17 Covered   
+/\top#DUT /sva/cover_wr_ack              fifo_sva Verilog  SVA  fifo_sva.sv(40)   62 Covered   
+/\top#DUT /sva/cover_overflow            fifo_sva Verilog  SVA  fifo_sva.sv(47)   41 Covered   
+/\top#DUT /sva/cover_underflow           fifo_sva Verilog  SVA  fifo_sva.sv(54)    7 Covered   
+/\top#DUT /sva/cover_wr_ptr_wrap_up      fifo_sva Verilog  SVA  fifo_sva.sv(61)    1 Covered   
+/\top#DUT /sva/cover_rd_ptr_wrap_up      fifo_sva Verilog  SVA  fifo_sva.sv(68)    1 Covered   
+/\top#DUT /sva/cover_count_up            fifo_sva Verilog  SVA  fifo_sva.sv(75)   50 Covered   
+/\top#DUT /sva/cover_count_down          fifo_sva Verilog  SVA  fifo_sva.sv(82)   32 Covered   
+/\top#DUT /sva/cover_pointer_threshold   fifo_sva Verilog  SVA  fifo_sva.sv(89)  167 Covered   
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       1         1         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\top#DUT /sva --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fifo_sva.sv
+    1                                                module fifo_sva ();
+    2                                                    parameter FIFO_WIDTH = 16;
+    3                                                    parameter FIFO_DEPTH = 8;
+    4                                                    
+    5                                                	
+    6               1                        136         always_comb begin 
+
+
+=================================================================================
+=== Instance: /\top#DUT 
+=== Design Unit: work.FIFO
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        25        25         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\top#DUT 
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO.SV
+------------------------------------IF Branch------------------------------------
+    26                                       270     Count coming in to IF
+    26              1                        103     		if (!fifo_if.rst_n) begin
+    31              1                         67     		else if (fifo_if.wr_en && count < FIFO_DEPTH) begin
+    37              1                        100     		else begin 
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    39                                       100     Count coming in to IF
+    39              1                         41     			if (fifo_if.full && fifo_if.wr_en) //bugs &&
+    41              1                         59     			else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    47                                       270     Count coming in to IF
+    47              1                        103     		if (!fifo_if.rst_n) begin
+    52              1                         55     		else if (fifo_if.rd_en && count != 0) begin
+    57              1                        112     		else begin
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    58                                       112     Count coming in to IF
+    58              1                          8     			if (fifo_if.empty && fifo_if.rd_en) // bugs &&
+    60              1                        104     			else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    66                                       221     Count coming in to IF
+    66              1                         74     		if (!fifo_if.rst_n) begin
+    69              1                        147     		else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    70                                       147     Count coming in to IF
+    70              1                         54     			if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b10) && !fifo_if.full) 
+    72              1                         33     			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b01) && !fifo_if.empty) 
+    74              1                          2     			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b11) && fifo_if.empty) 
+    76              1                         11     			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b11) && fifo_if.full)
+    78              1                         47     			else 
+Branch totals: 5 hits of 5 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    84                                       107     Count coming in to IF
+    84              1                         20     		assign fifo_if.full = (count == FIFO_DEPTH)? 1 : 0;
+    84              2                         87     		assign fifo_if.full = (count == FIFO_DEPTH)? 1 : 0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    85                                       107     Count coming in to IF
+    85              1                         10     		assign fifo_if.empty = (count == 0)? 1 : 0;
+    85              2                         97     		assign fifo_if.empty = (count == 0)? 1 : 0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    87                                       107     Count coming in to IF
+    87              1                         25     		assign fifo_if.almostfull = (count == FIFO_DEPTH-1)? 1 : 0; // error in design, should be FIFO_DEPTH-1
+    87              2                         82     		assign fifo_if.almostfull = (count == FIFO_DEPTH-1)? 1 : 0; // error in design, should be FIFO_DEPTH-1
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    88                                       107     Count coming in to IF
+    88              1                         12     		assign fifo_if.almostempty = (count == 1)? 1 : 0;
+    88              2                         95     		assign fifo_if.almostempty = (count == 1)? 1 : 0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      24        24         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /\top#DUT  --
+
+  File FIFO.SV
+----------------Focused Condition View-------------------
+Line       31 Item    1  (fifo_if.wr_en && (count < 8))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.wr_en         Y
+    (count < 8)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.wr_en_0       -                             
+  Row   2:          1  fifo_if.wr_en_1       (count < 8)                   
+  Row   3:          1  (count < 8)_0         fifo_if.wr_en                 
+  Row   4:          1  (count < 8)_1         fifo_if.wr_en                 
+
+----------------Focused Condition View-------------------
+Line       39 Item    1  (fifo_if.full && fifo_if.wr_en)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+   fifo_if.full         Y
+  fifo_if.wr_en         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.full_0        -                             
+  Row   2:          1  fifo_if.full_1        fifo_if.wr_en                 
+  Row   3:          1  fifo_if.wr_en_0       fifo_if.full                  
+  Row   4:          1  fifo_if.wr_en_1       fifo_if.full                  
+
+----------------Focused Condition View-------------------
+Line       52 Item    1  (fifo_if.rd_en && (count != 0))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.rd_en         Y
+   (count != 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.rd_en_0       -                             
+  Row   2:          1  fifo_if.rd_en_1       (count != 0)                  
+  Row   3:          1  (count != 0)_0        fifo_if.rd_en                 
+  Row   4:          1  (count != 0)_1        fifo_if.rd_en                 
+
+----------------Focused Condition View-------------------
+Line       58 Item    1  (fifo_if.empty && fifo_if.rd_en)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.empty         Y
+  fifo_if.rd_en         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.empty_0       -                             
+  Row   2:          1  fifo_if.empty_1       fifo_if.rd_en                 
+  Row   3:          1  fifo_if.rd_en_0       fifo_if.empty                 
+  Row   4:          1  fifo_if.rd_en_1       fifo_if.empty                 
+
+----------------Focused Condition View-------------------
+Line       70 Item    1  ((~fifo_if.rd_en && fifo_if.wr_en) && ~fifo_if.full)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.rd_en         Y
+  fifo_if.wr_en         Y
+   fifo_if.full         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.rd_en_0       (~fifo_if.full && fifo_if.wr_en)
+  Row   2:          1  fifo_if.rd_en_1       -                             
+  Row   3:          1  fifo_if.wr_en_0       ~fifo_if.rd_en                
+  Row   4:          1  fifo_if.wr_en_1       (~fifo_if.full && ~fifo_if.rd_en)
+  Row   5:          1  fifo_if.full_0        (~fifo_if.rd_en && fifo_if.wr_en)
+  Row   6:          1  fifo_if.full_1        (~fifo_if.rd_en && fifo_if.wr_en)
+
+----------------Focused Condition View-------------------
+Line       72 Item    1  ((fifo_if.rd_en && ~fifo_if.wr_en) && ~fifo_if.empty)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.rd_en         Y
+  fifo_if.wr_en         Y
+  fifo_if.empty         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.rd_en_0       -                             
+  Row   2:          1  fifo_if.rd_en_1       (~fifo_if.empty && ~fifo_if.wr_en)
+  Row   3:          1  fifo_if.wr_en_0       (~fifo_if.empty && fifo_if.rd_en)
+  Row   4:          1  fifo_if.wr_en_1       fifo_if.rd_en                 
+  Row   5:          1  fifo_if.empty_0       (fifo_if.rd_en && ~fifo_if.wr_en)
+  Row   6:          1  fifo_if.empty_1       (fifo_if.rd_en && ~fifo_if.wr_en)
+
+----------------Focused Condition View-------------------
+Line       74 Item    1  ((fifo_if.rd_en && fifo_if.wr_en) && fifo_if.empty)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.rd_en         Y
+  fifo_if.wr_en         Y
+  fifo_if.empty         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.rd_en_0       -                             
+  Row   2:          1  fifo_if.rd_en_1       (fifo_if.empty && fifo_if.wr_en)
+  Row   3:          1  fifo_if.wr_en_0       fifo_if.rd_en                 
+  Row   4:          1  fifo_if.wr_en_1       (fifo_if.empty && fifo_if.rd_en)
+  Row   5:          1  fifo_if.empty_0       (fifo_if.rd_en && fifo_if.wr_en)
+  Row   6:          1  fifo_if.empty_1       (fifo_if.rd_en && fifo_if.wr_en)
+
+----------------Focused Condition View-------------------
+Line       76 Item    1  ((fifo_if.rd_en && fifo_if.wr_en) && fifo_if.full)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  fifo_if.rd_en         Y
+  fifo_if.wr_en         Y
+   fifo_if.full         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  fifo_if.rd_en_0       -                             
+  Row   2:          1  fifo_if.rd_en_1       (fifo_if.full && fifo_if.wr_en)
+  Row   3:          1  fifo_if.wr_en_0       fifo_if.rd_en                 
+  Row   4:          1  fifo_if.wr_en_1       (fifo_if.full && fifo_if.rd_en)
+  Row   5:          1  fifo_if.full_0        (fifo_if.rd_en && fifo_if.wr_en)
+  Row   6:          1  fifo_if.full_1        (fifo_if.rd_en && fifo_if.wr_en)
+
+----------------Focused Condition View-------------------
+Line       84 Item    1  (count == 8)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count == 8)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == 8)_0        -                             
+  Row   2:          1  (count == 8)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       85 Item    1  (count == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == 0)_0        -                             
+  Row   2:          1  (count == 0)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       87 Item    1  (count == (8 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+          Input Term   Covered  Reason for no coverage   Hint
+         -----------  --------  -----------------------  --------------
+  (count == (8 - 1))         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == (8 - 1))_0  -                             
+  Row   2:          1  (count == (8 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       88 Item    1  (count == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count == 1)_0        -                             
+  Row   2:          1  (count == 1)_1        -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      30        30         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\top#DUT  --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File FIFO.SV
+    8                                                module FIFO(fifo_IF.DUT fifo_if);
+    9                                                	parameter FIFO_WIDTH = 16;
+    10                                               	parameter FIFO_DEPTH = 8;
+    11                                               	//input [FIFO_WIDTH-1:0] data_in;
+    12                                               	//input clk, rst_n, wr_en, rd_en;
+    13                                               	//output reg [FIFO_WIDTH-1:0] data_out;
+    14                                               	//output reg wr_ack, overflow;
+    15                                               	//output full, empty, almostfull, almostempty, underflow;
+    16                                               	 
+    17                                               	localparam max_fifo_addr = $clog2(FIFO_DEPTH);
+    18                                               	
+    19                                               	reg [FIFO_WIDTH-1:0] mem [FIFO_DEPTH-1:0];
+    20                                               	
+    21                                               	reg [max_fifo_addr-1:0] wr_ptr, rd_ptr;
+    22                                               	reg [max_fifo_addr:0] count;
+    23                                               	
+    24                                               	
+    25              1                        270     	always @(posedge fifo_if.clk or negedge fifo_if.rst_n) begin
+    26                                               		if (!fifo_if.rst_n) begin
+    27              1                        103     			wr_ptr <= 0;
+    28              1                        103     			fifo_if.wr_ack <=0; // bugs
+    29              1                        103     			fifo_if.overflow <= 0;//bugs
+    30                                               		end
+    31                                               		else if (fifo_if.wr_en && count < FIFO_DEPTH) begin
+    32              1                         67     			mem[wr_ptr] <= fifo_if.data_in;
+    33              1                         67     			fifo_if.wr_ack <= 1;
+    34              1                         67     			wr_ptr <= wr_ptr + 1;
+    35              1                         67     			fifo_if.overflow <=0; //bugs
+    36                                               		end
+    37                                               		else begin 
+    38              1                        100     			fifo_if.wr_ack <= 0; 
+    39                                               			if (fifo_if.full && fifo_if.wr_en) //bugs &&
+    40              1                         41     				fifo_if.overflow <= 1;
+    41                                               			else
+    42              1                         59     				fifo_if.overflow <= 0;
+    43                                               		end
+    44                                               	end
+    45                                               	
+    46              1                        270     	always @(posedge fifo_if.clk or negedge fifo_if.rst_n) begin
+    47                                               		if (!fifo_if.rst_n) begin
+    48              1                        103     			rd_ptr <= 0;
+    49              1                        103     			fifo_if.underflow <= 0; // bugs
+    50                                               		
+    51                                               		end
+    52                                               		else if (fifo_if.rd_en && count != 0) begin
+    53              1                         55     			fifo_if.data_out <= mem[rd_ptr];
+    54              1                         55     			rd_ptr <= rd_ptr + 1;
+    55              1                         55     			fifo_if.underflow <= 0; // bugs
+    56                                               		end
+    57                                               		else begin
+    58                                               			if (fifo_if.empty && fifo_if.rd_en) // bugs &&
+    59              1                          8     				fifo_if.underflow <= 1;
+    60                                               			else
+    61              1                        104     				fifo_if.underflow <= 0;
+    62                                               		end
+    63                                               	end
+    64                                               	
+    65              1                        221     	always @(posedge fifo_if.clk or negedge fifo_if.rst_n) begin
+    66                                               		if (!fifo_if.rst_n) begin
+    67              1                         74     			count <= 0;
+    68                                               		end
+    69                                               		else begin
+    70                                               			if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b10) && !fifo_if.full) 
+    71              1                         54     				count <= count + 1;
+    72                                               			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b01) && !fifo_if.empty) 
+    73              1                         33     				count <= count - 1;
+    74                                               			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b11) && fifo_if.empty) 
+    75              1                          2     				count <= count+1;
+    76                                               			else if (({fifo_if.wr_en, fifo_if.rd_en} == 2'b11) && fifo_if.full)
+    77              1                         11     				count <= count-1;
+    78                                               			else 
+    79              1                         47     				count <= count;
+    80                                               
+    81                                               		end
+    82                                               	end
+    83                                               	
+    84              1                        108     		assign fifo_if.full = (count == FIFO_DEPTH)? 1 : 0;
+    85              1                        108     		assign fifo_if.empty = (count == 0)? 1 : 0;
+    86                                               		//fifo_if.underflow = (fifo_if.empty && fifo_if.rd_en)? 1 : 0; // sequential output
+    87              1                        108     		assign fifo_if.almostfull = (count == FIFO_DEPTH-1)? 1 : 0; // error in design, should be FIFO_DEPTH-1
+    88              1                        108     		assign fifo_if.almostempty = (count == 1)? 1 : 0;
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         20        20         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /\top#DUT  --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                        count[3-0]           1           1      100.00 
+                                       rd_ptr[2-0]           1           1      100.00 
+                                       wr_ptr[2-0]           1           1      100.00 
+
+Total Node Count     =         10 
+Toggled Node Count   =         10 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (20 of 20 bins)
+
+=================================================================================
+=== Instance: /\top#DUT#sva 
+=== Design Unit: work.fifo_sva
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      13        13         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT#sva /assert_reset
+                     fifo_sva.sv(9)                     0          1
+/\top#DUT#sva /assert_full
+                     fifo_sva.sv(14)                    0          1
+/\top#DUT#sva /assert_empty
+                     fifo_sva.sv(19)                    0          1
+/\top#DUT#sva /assert_almostfull
+                     fifo_sva.sv(24)                    0          1
+/\top#DUT#sva /assert_almostempty
+                     fifo_sva.sv(29)                    0          1
+/\top#DUT#sva /assert_wr_ack
+                     fifo_sva.sv(39)                    0          1
+/\top#DUT#sva /assert_overflow
+                     fifo_sva.sv(46)                    0          1
+/\top#DUT#sva /assert_underflow
+                     fifo_sva.sv(53)                    0          1
+/\top#DUT#sva /assert_wr_ptr_wrap_up
+                     fifo_sva.sv(60)                    0          1
+/\top#DUT#sva /assert_rd_ptr_wrap_up
+                     fifo_sva.sv(67)                    0          1
+/\top#DUT#sva /assert_count_up
+                     fifo_sva.sv(74)                    0          1
+/\top#DUT#sva /assert_count_down
+                     fifo_sva.sv(81)                    0          1
+/\top#DUT#sva /assert_pointer_threshold
+                     fifo_sva.sv(88)                    0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\top#DUT#sva 
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fifo_sva.sv
+------------------------------------IF Branch------------------------------------
+    8                                        136     Count coming in to IF
+    8               1                         16             if(!fifo_if.rst_n) begin
+                                             120     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    13                                       136     Count coming in to IF
+    13              1                         20             if(FIFO.count == FIFO_DEPTH) begin
+                                             116     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    18                                       136     Count coming in to IF
+    18              1                         20             if (FIFO.count == 0) begin
+                                             116     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    23                                       136     Count coming in to IF
+    23              1                         33             if (FIFO.count == FIFO_DEPTH-1) begin // error in design, should be FIFO_DEPTH-1
+                                             103     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    28                                       136     Count coming in to IF
+    28              1                         17             if (FIFO.count == 1) begin
+                                             119     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       4         4         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /\top#DUT#sva  --
+
+  File fifo_sva.sv
+----------------Focused Condition View-------------------
+Line       13 Item    1  (FIFO.count == 8)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (FIFO.count == 8)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (FIFO.count == 8)_0   -                             
+  Row   2:          1  (FIFO.count == 8)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       18 Item    1  (FIFO.count == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (FIFO.count == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (FIFO.count == 0)_0   -                             
+  Row   2:          1  (FIFO.count == 0)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       23 Item    1  (FIFO.count == (8 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+  (FIFO.count == (8 - 1))         Y
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:          1  (FIFO.count == (8 - 1))_0  -                             
+  Row   2:          1  (FIFO.count == (8 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       28 Item    1  (FIFO.count == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (FIFO.count == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (FIFO.count == 1)_0   -                             
+  Row   2:          1  (FIFO.count == 1)_1   -                             
+
+
+
+Directive Coverage:
+    Directives                      13        13         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT#sva /cover_reset               fifo_sva Verilog  SVA  fifo_sva.sv(10)    9 Covered   
+/\top#DUT#sva /cover_full                fifo_sva Verilog  SVA  fifo_sva.sv(15)   20 Covered   
+/\top#DUT#sva /cover_empty               fifo_sva Verilog  SVA  fifo_sva.sv(20)   20 Covered   
+/\top#DUT#sva /cover_almostfull          fifo_sva Verilog  SVA  fifo_sva.sv(25)   33 Covered   
+/\top#DUT#sva /cover_almostempty         fifo_sva Verilog  SVA  fifo_sva.sv(30)   17 Covered   
+/\top#DUT#sva /cover_wr_ack              fifo_sva Verilog  SVA  fifo_sva.sv(40)   62 Covered   
+/\top#DUT#sva /cover_overflow            fifo_sva Verilog  SVA  fifo_sva.sv(47)   41 Covered   
+/\top#DUT#sva /cover_underflow           fifo_sva Verilog  SVA  fifo_sva.sv(54)    7 Covered   
+/\top#DUT#sva /cover_wr_ptr_wrap_up      fifo_sva Verilog  SVA  fifo_sva.sv(61)    1 Covered   
+/\top#DUT#sva /cover_rd_ptr_wrap_up      fifo_sva Verilog  SVA  fifo_sva.sv(68)    1 Covered   
+/\top#DUT#sva /cover_count_up            fifo_sva Verilog  SVA  fifo_sva.sv(75)   50 Covered   
+/\top#DUT#sva /cover_count_down          fifo_sva Verilog  SVA  fifo_sva.sv(82)   32 Covered   
+/\top#DUT#sva /cover_pointer_threshold   fifo_sva Verilog  SVA  fifo_sva.sv(89)  167 Covered   
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       1         1         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\top#DUT#sva  --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fifo_sva.sv
+    1                                                module fifo_sva ();
+    2                                                    parameter FIFO_WIDTH = 16;
+    3                                                    parameter FIFO_DEPTH = 8;
+    4                                                    
+    5                                                	
+    6               1                        136         always_comb begin 
+
+
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT /sva/cover_reset               fifo_sva Verilog  SVA  fifo_sva.sv(10)    9 Covered   
+/\top#DUT /sva/cover_full                fifo_sva Verilog  SVA  fifo_sva.sv(15)   20 Covered   
+/\top#DUT /sva/cover_empty               fifo_sva Verilog  SVA  fifo_sva.sv(20)   20 Covered   
+/\top#DUT /sva/cover_almostfull          fifo_sva Verilog  SVA  fifo_sva.sv(25)   33 Covered   
+/\top#DUT /sva/cover_almostempty         fifo_sva Verilog  SVA  fifo_sva.sv(30)   17 Covered   
+/\top#DUT /sva/cover_wr_ack              fifo_sva Verilog  SVA  fifo_sva.sv(40)   62 Covered   
+/\top#DUT /sva/cover_overflow            fifo_sva Verilog  SVA  fifo_sva.sv(47)   41 Covered   
+/\top#DUT /sva/cover_underflow           fifo_sva Verilog  SVA  fifo_sva.sv(54)    7 Covered   
+/\top#DUT /sva/cover_wr_ptr_wrap_up      fifo_sva Verilog  SVA  fifo_sva.sv(61)    1 Covered   
+/\top#DUT /sva/cover_rd_ptr_wrap_up      fifo_sva Verilog  SVA  fifo_sva.sv(68)    1 Covered   
+/\top#DUT /sva/cover_count_up            fifo_sva Verilog  SVA  fifo_sva.sv(75)   50 Covered   
+/\top#DUT /sva/cover_count_down          fifo_sva Verilog  SVA  fifo_sva.sv(82)   32 Covered   
+/\top#DUT /sva/cover_pointer_threshold   fifo_sva Verilog  SVA  fifo_sva.sv(89)  167 Covered   
+/\top#DUT#sva /cover_reset               fifo_sva Verilog  SVA  fifo_sva.sv(10)    9 Covered   
+/\top#DUT#sva /cover_full                fifo_sva Verilog  SVA  fifo_sva.sv(15)   20 Covered   
+/\top#DUT#sva /cover_empty               fifo_sva Verilog  SVA  fifo_sva.sv(20)   20 Covered   
+/\top#DUT#sva /cover_almostfull          fifo_sva Verilog  SVA  fifo_sva.sv(25)   33 Covered   
+/\top#DUT#sva /cover_almostempty         fifo_sva Verilog  SVA  fifo_sva.sv(30)   17 Covered   
+/\top#DUT#sva /cover_wr_ack              fifo_sva Verilog  SVA  fifo_sva.sv(40)   62 Covered   
+/\top#DUT#sva /cover_overflow            fifo_sva Verilog  SVA  fifo_sva.sv(47)   41 Covered   
+/\top#DUT#sva /cover_underflow           fifo_sva Verilog  SVA  fifo_sva.sv(54)    7 Covered   
+/\top#DUT#sva /cover_wr_ptr_wrap_up      fifo_sva Verilog  SVA  fifo_sva.sv(61)    1 Covered   
+/\top#DUT#sva /cover_rd_ptr_wrap_up      fifo_sva Verilog  SVA  fifo_sva.sv(68)    1 Covered   
+/\top#DUT#sva /cover_count_up            fifo_sva Verilog  SVA  fifo_sva.sv(75)   50 Covered   
+/\top#DUT#sva /cover_count_down          fifo_sva Verilog  SVA  fifo_sva.sv(82)   32 Covered   
+/\top#DUT#sva /cover_pointer_threshold   fifo_sva Verilog  SVA  fifo_sva.sv(89)  167 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 26
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT /sva/assert_reset
+                     fifo_sva.sv(9)                     0          1
+/\top#DUT /sva/assert_full
+                     fifo_sva.sv(14)                    0          1
+/\top#DUT /sva/assert_empty
+                     fifo_sva.sv(19)                    0          1
+/\top#DUT /sva/assert_almostfull
+                     fifo_sva.sv(24)                    0          1
+/\top#DUT /sva/assert_almostempty
+                     fifo_sva.sv(29)                    0          1
+/\top#DUT /sva/assert_wr_ack
+                     fifo_sva.sv(39)                    0          1
+/\top#DUT /sva/assert_overflow
+                     fifo_sva.sv(46)                    0          1
+/\top#DUT /sva/assert_underflow
+                     fifo_sva.sv(53)                    0          1
+/\top#DUT /sva/assert_wr_ptr_wrap_up
+                     fifo_sva.sv(60)                    0          1
+/\top#DUT /sva/assert_rd_ptr_wrap_up
+                     fifo_sva.sv(67)                    0          1
+/\top#DUT /sva/assert_count_up
+                     fifo_sva.sv(74)                    0          1
+/\top#DUT /sva/assert_count_down
+                     fifo_sva.sv(81)                    0          1
+/\top#DUT /sva/assert_pointer_threshold
+                     fifo_sva.sv(88)                    0          1
+/\top#DUT#sva /assert_reset
+                     fifo_sva.sv(9)                     0          1
+/\top#DUT#sva /assert_full
+                     fifo_sva.sv(14)                    0          1
+/\top#DUT#sva /assert_empty
+                     fifo_sva.sv(19)                    0          1
+/\top#DUT#sva /assert_almostfull
+                     fifo_sva.sv(24)                    0          1
+/\top#DUT#sva /assert_almostempty
+                     fifo_sva.sv(29)                    0          1
+/\top#DUT#sva /assert_wr_ack
+                     fifo_sva.sv(39)                    0          1
+/\top#DUT#sva /assert_overflow
+                     fifo_sva.sv(46)                    0          1
+/\top#DUT#sva /assert_underflow
+                     fifo_sva.sv(53)                    0          1
+/\top#DUT#sva /assert_wr_ptr_wrap_up
+                     fifo_sva.sv(60)                    0          1
+/\top#DUT#sva /assert_rd_ptr_wrap_up
+                     fifo_sva.sv(67)                    0          1
+/\top#DUT#sva /assert_count_up
+                     fifo_sva.sv(74)                    0          1
+/\top#DUT#sva /assert_count_down
+                     fifo_sva.sv(81)                    0          1
+/\top#DUT#sva /assert_pointer_threshold
+                     fifo_sva.sv(88)                    0          1
+
+Total Coverage By Instance (filtered view): 100.00%
+
